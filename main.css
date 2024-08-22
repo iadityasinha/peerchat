@@ -1,0 +1,185 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #1d1d1f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Video Container */
+.video-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 30px;
+}
+
+.video-player {
+    width: 48%;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls Container */
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+/* Control Buttons */
+.control-container {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.control-container:hover {
+    background-color: #007aff;
+    transform: scale(1.1);
+}
+
+.control-container img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Specific Buttons Styling */
+#camera-btn.active {
+    background-color: #007aff;
+}
+
+#mic-btn.active {
+    background-color: #007aff;
+}
+
+#leave-btn {
+    background-color: #ff3b30;
+}
+
+#leave-btn:hover {
+    background-color: #ff2d23;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-player {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #controls {
+        bottom: 20px;
+        padding: 8px;
+        gap: 15px;
+    }
+
+    .control-container img {
+        width: 20px;
+        height: 20px;
+    }
+}
+/**{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#videos{
+    display: grid;
+    grid-template-columns: 1fr;
+    height:100vh;
+    overflow:hidden;
+}
+
+.video-player{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+#user-2{
+    display: none;
+}
+
+.smallFrame{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 170px;
+    width: 300px;
+    border-radius: 5px;
+    border:2px solid #b366f9;
+    -webkit-box-shadow: 3px 3px 15px -1px rgba(0,0,0,0.77);
+    box-shadow: 3px 3px 15px -1px rgba(0,0,0,0.77);
+    z-index: 999;
+}
+
+
+#controls{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform:translateX(-50%);
+    display: flex;
+    gap: 1em;
+}
+
+.control-container{
+  background-color: rgb(179, 102, 249, .9);
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control-container img{
+    height: 30px;
+    width: 30px;
+}
+
+#leave-btn{
+    background-color: rgb(255,80,80, 1);
+}
+
+@media screen and (max-width:600px) {
+        .smallFrame{
+            height: 80px;
+            width: 120px;
+        }
+
+        .control-container img{
+            height: 20px;
+            width: 20px;
+        }
+}
