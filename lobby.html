@@ -8,7 +8,6 @@
     <link rel='stylesheet' type='text/css' media='screen' href='lobby.css'>
 </head>
 <body>
-    
     <main id="lobby-container">
         <div id="form-container">
             <div id="form__container__header">
@@ -23,19 +22,16 @@
             </div>
         </div>
     </main>
-
-
-
 </body>
 
 <script>
-    let form = document.getElementById('join-form')
+    let form = document.getElementById('join-form');
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault()
-        let inviteCode = e.target.invite_link.value
-        window.location = `index.html?room=${inviteCode}` 
-    })
+        e.preventDefault();
+        let inviteCode = e.target.invite_link.value;
+        window.location = `index.html?room=${inviteCode}`; // Use 'room' here
+    });
 </script>
 
 </html>
